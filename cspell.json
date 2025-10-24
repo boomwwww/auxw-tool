@@ -1,0 +1,34 @@
+{
+  "import": ["@cspell/dict-typescript/cspell-ext.json"],
+  "caseSensitive": false,
+  "dictionaries": ["custom-dictionary"],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-dictionary",
+      "path": "./.cspell/custom-dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "ignorePaths": [
+    "**/.husky/**",
+    "**/.vscode/**",
+    "**/auxw_data/**",
+    "**/build/**",
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/out/**",
+
+    "**/package.json",
+    "**/pnpm-lock.yaml",
+    ".gitignore",
+    ".prettierignore",
+    "electron-builder.yml",
+
+    "**/cache/**",
+    "**/public/**",
+
+    "**/*.svg",
+
+    "**/no_cspell/**"
+  ]
+}

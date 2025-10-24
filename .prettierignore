@@ -1,0 +1,11 @@
+auxw_data
+build
+dist
+out
+node_modules
+releases
+
+pnpm-lock.yaml
+
+cache
+auto

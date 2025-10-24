@@ -1,0 +1,16 @@
+auxw_data/**
+!.gitkeep
+
+dist
+node_modules
+out
+releases
+
+cache
+
+.env
+
+.eslintcache
+*.log*
+
+.DS_Store

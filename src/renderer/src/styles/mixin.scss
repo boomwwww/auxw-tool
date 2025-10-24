@@ -1,0 +1,179 @@
+// 布局
+@mixin col {
+  // 子元素从上到下排列
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin row {
+  // 子元素从左到右排列
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin grid-display {
+  // 网格布局
+  display: grid;
+  gap: 0;
+  justify-content: center;
+  align-content: center;
+}
+
+// 允许选中文本
+@mixin text-can-be-selected {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+// 边框样式
+@mixin with-border($i) {
+  border: solid var(--color-border);
+  border-width: 1px * $i;
+  border-radius: 0.5px * $i;
+}
+@mixin with-top-border($i) {
+  border-top: solid var(--color-border);
+  border-top-width: 1px * $i;
+}
+@mixin with-bottom-border($i) {
+  border-bottom: solid var(--color-border);
+  border-bottom-width: 1px * $i;
+}
+@mixin with-right-border($i) {
+  border-right: solid var(--color-border);
+  border-right-width: 1px * $i;
+}
+@mixin with-left-border($i) {
+  border-left: solid var(--color-border);
+  border-left-width: 1px * $i;
+}
+
+// 按钮样式
+@mixin button-shape {
+  // 按钮形状
+  border-radius: 1vh;
+  border: none;
+}
+@mixin button-cursor {
+  // 按钮鼠标样式
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+@mixin button-color($color) {
+  // 按钮颜色
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  // 文字描边
+  text-shadow: 0 0 1px var(--color-text);
+
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: color-mix(in hsl, black 10%, var(--color-bg));
+    color: color-mix(in hsl, black 10%, var(--color-text));
+    border-color: color-mix(in hsl, black 10%, var(--color-border));
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, white 10%, var(--color-bg));
+    color: color-mix(in hsl, white 10%, var(--color-text));
+    border-color: color-mix(in hsl, white 10%, var(--color-border));
+  }
+
+  &:disabled {
+    background-color: color-mix(in hsl, white 30%, var(--color-bg));
+    color: color-mix(in hsl, white 30%, var(--color-text));
+    border-color: color-mix(in hsl, white 30%, var(--color-border));
+    cursor: not-allowed;
+  }
+}
+
+/* 普通按钮颜色 */
+@mixin plain-button-color {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: color-mix(in hsl, black 10%, var(--color-bg));
+    color: color-mix(in hsl, black 10%, var(--color-text));
+    border-color: color-mix(in hsl, black 10%, var(--color-border));
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, white 10%, var(--color-bg));
+    color: color-mix(in hsl, white 10%, var(--color-text));
+    border-color: color-mix(in hsl, white 10%, var(--color-border));
+  }
+
+  &:disabled {
+    background-color: color-mix(in hsl, white 30%, var(--color-bg));
+    color: color-mix(in hsl, white 30%, var(--color-text));
+    border-color: color-mix(in hsl, white 30%, var(--color-border));
+  }
+}
+
+/* 正常按钮样式 */
+@mixin normal-button {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  border: var(--color-primary) 0.1vh solid;
+  border-radius: 1vh;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, black 30%, var(--color-primary));
+    color: color-mix(in hsl, black 30%, var(--color-bg));
+    border-color: color-mix(in hsl, black 30%, var(--color-primary));
+  }
+
+  &:disabled {
+    background-color: color-mix(in hsl, white 30%, var(--color-bg));
+    color: color-mix(in hsl, white 30%, var(--color-text));
+    border-color: color-mix(in hsl, white 30%, var(--color-border));
+    cursor: not-allowed;
+  }
+}
+
+/* 活跃按钮样式 */
+@mixin selected-button {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: var(--color-bg) 0.1vh solid;
+  border-radius: 1vh;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color-mix(in hsl, white 30%, var(--color-primary));
+    color: color-mix(in hsl, white 30%, var(--color-bg));
+    border-color: color-mix(in hsl, white 30%, var(--color-bg));
+  }
+
+  &:active {
+    background-color: color-mix(in hsl, black 30%, var(--color-primary));
+    color: color-mix(in hsl, black 30%, var(--color-bg));
+    border-color: color-mix(in hsl, black 30%, var(--color-bg));
+  }
+
+  &:disabled {
+    background-color: color-mix(in hsl, white 60%, var(--color-primary));
+    color: color-mix(in hsl, white 60%, var(--color-bg));
+    border-color: color-mix(in hsl, white 60%, var(--color-bg));
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  --color-base-primary: #3388bb;
+  --color-base-secondary: #7777aa;
+
+  --color-base-positive: #67c23a;
+  --color-base-caution: #e6a23c;
+  --color-base-negative: #f56c6c;
+
+  --color-base-info: #999;
+  --color-base-text: #333;
+
+  --color-base-black: #070707;
+  --color-base-white: #f7f7f7;
+  --color-base-gray: #ddd;
+}
+
+:root {
+  --color-primary: var(--color-base-primary);
+  --color-secondary: var(--color-base-secondary);
+
+  --color-ok: var(--color-base-positive);
+  --color-warning: var(--color-base-caution);
+  --color-danger: var(--color-base-negative);
+
+  --color-info: var(--color-base-info);
+  --color-text: var(--color-base-text);
+
+  --color-border: var(--color-base-gray);
+  --color-bg: var(--color-base-white);
+
+  --color-offset-hover: color-mix(in hsl, var(--color-base-white) 25%, var(--color-base-black));
+  --color-offset-active: var(--color-base-white);
+}
+
+:root[data-theme='dark'] {
+  --color-primary: var(--color-base-primary);
+  --color-secondary: var(--color-base-secondary);
+
+  --color-ok: var(--color-base-positive);
+  --color-warning: var(--color-base-caution);
+  --color-danger: var(--color-base-negative);
+
+  --color-info: color-mix(in hsl, var(--color-base-white) 25%, var(--color-base-info));
+  --color-text: color-mix(in hsl, var(--color-base-white) 75%, var(--color-base-text));
+
+  --color-border: color-mix(in hsl, var(--color-base-black) 66.7%, var(--color-base-gray));
+  --color-bg: color-mix(in hsl, var(--color-base-black) 75%, var(--color-base-gray));
+
+  --color-offset-hover: color-mix(in hsl, var(--color-base-white) 25%, var(--color-base-white));
+  --color-offset-active: color-mix(in hsl, var(--color-base-black) 25%, var(--color-base-black));
+}

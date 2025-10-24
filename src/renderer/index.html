@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AuxW_Tool</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self' auxw:;
+        script-src 'self' 'unsafe-eval' auxw:;
+        style-src 'self' 'unsafe-inline' auxw:;
+        img-src 'self' data: auxw:;
+        connect-src 'self' auxw:;
+      "
+    />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

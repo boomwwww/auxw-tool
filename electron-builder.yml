@@ -1,0 +1,30 @@
+appId: com.boomww.auxw-tool
+productName: AuxW_Tool
+directories:
+  buildResources: build
+files:
+  - '!**/.cspell/*'
+  - '!**/.husky/*'
+  - '!**/.vscode/*'
+  - '!auxw_data/*'
+  - '!extra/*'
+  - '!releases/*'
+  - '!resources/*'
+  - '!scripts/*'
+  - '!src/*'
+  - '!**/{.editorconfig,.prettierrc.yaml,.prettierignore,eslint.config.mjs,.eslintcache,cspell.json}'
+  - '!**/{.gitignore,.gitattributes,.lintstagedrc.mjs,commitlint.config.mjs}'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!**/{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!**/{README.md,CONTRIBUTING.md}'
+  - '!**/{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+win:
+  target:
+    - portable
+  executableName: AuxW_Tool
+npmRebuild: false
+publish:
+  provider: generic
+  url: https://github.com/boomwwww/auxw-tool
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/

@@ -1,9 +1,10 @@
 import fs from 'fs-extra'
 import { paths } from '../utils/paths.mjs'
+import { logger } from '../utils/logger.mjs'
 
-console.log('-'.padEnd(50, '-'), '\n\tpre commit\n', '-'.padEnd(50, '-'))
+logger.run('pre commit')
 
 const logPath = paths.root('scripts', 'dev_scripts', 'pre_commit.log')
 fs.ensureFileSync(logPath)
 
-console.log('-'.padEnd(50, '-'), '\n\tpre commit done\n', '-'.padEnd(50, '-'))
+logger.done('pre commit')

@@ -1,2 +1,3 @@
 #!/usr/bin/env sh
+node scripts/dev_scripts/husky_pre_commit.mjs
 pnpm run lint

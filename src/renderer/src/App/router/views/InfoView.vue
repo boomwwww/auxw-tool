@@ -16,7 +16,7 @@ const onTabClick = (tabName: string): void => {
 const info = ref<object>({})
 
 onMounted(() => {
-  invoke('api:get-info', 'test-data').then((res) => {
+  invoke('api:get-info', 'a').then((res) => {
     info.value = res as object
   })
 })

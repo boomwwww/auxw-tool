@@ -10,11 +10,11 @@ hero:
   actions:
     - theme: brand
       text: 条目列表
-      link: /items/item-list
+      link: /lib/item-list
 
     - theme: alt
       text: 关于
-      link: /items/about
+      link: /lib/about
 
 features:
   - title: 立绘包文件夹整理

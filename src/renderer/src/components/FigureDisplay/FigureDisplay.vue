@@ -1,8 +1,7 @@
 <script setup lang="ts">
 defineOptions({ name: 'FigureDisplay' })
-const props = defineProps({
-  l2dPath: { type: String, required: true }
-})
+
+const props = defineProps<{ l2dPath: string }>()
 
 import type { Application } from 'pixi.js'
 import type { Live2DModel } from 'pixi-live2d-display'

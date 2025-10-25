@@ -25,8 +25,8 @@ export const paths = {
     if (is.dev) {
       return this.root('auxw_data', ...args)
     } else {
-      const resourcePath = process.env.PORTABLE_EXECUTABLE_DIR || app.getAppPath()
-      return path.resolve(resourcePath, 'auxw_data', ...args)
+      const rootPath = process.env.PORTABLE_EXECUTABLE_DIR || app.getAppPath()
+      return this.resolve(rootPath, 'auxw_data', ...args)
     }
   },
   out(...args: string[]) {
@@ -76,7 +76,7 @@ export const paths = {
     return this.resources('logo.png')
   },
 
-  /** 得到当前文件夹下所有文件路径 */
+  /** 得到文件夹下所有文件路径 */
   getAllFilePaths(rootPathAbs: string): {
     pathAbs: string
     pathFromRoot: string

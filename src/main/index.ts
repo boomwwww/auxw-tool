@@ -44,12 +44,14 @@ app.whenReady().then(() => {
     .catch((error) => {
       console.error(error)
       createDocsWindow().then(() => {
-        dialog.showMessageBox({
-          type: 'error',
-          title: '错误提示',
-          message: `Live2d 相关脚本下载失败，请关闭程序，确保网络畅通后重试，或查阅说明文档\n${error}`,
-          buttons: ['确定']
-        })
+        setTimeout(() => {
+          dialog.showMessageBox({
+            type: 'error',
+            title: '错误提示',
+            message: `Live2d 相关脚本下载失败，请关闭程序，确保网络畅通后重试，或查阅说明文档\n${error}`,
+            buttons: ['确定']
+          })
+        }, 1000)
       })
     })
 })

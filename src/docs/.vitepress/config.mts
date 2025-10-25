@@ -10,16 +10,16 @@ export default defineConfig({
 
     logo: '/resources/logo.png',
     nav: [
-      { text: '条目列表', link: '/items/item-list' },
-      { text: '关于', link: '/items/about' }
+      { text: '条目列表', link: '/lib/item-list' },
+      { text: '关于', link: '/lib/about' }
     ],
 
     sidebar: [
       {
         text: '条目列表',
         items: [
-          // { text: '条目a', link: '/items/item-list' },
-          // { text: '条目b', link: '/items/item-list' }
+          // { text: '条目a', link: '/lib/item-list' },
+          // { text: '条目b', link: '/lib/item-list' }
         ]
       }
     ],
@@ -37,12 +37,10 @@ export default defineConfig({
       }
     ]
   ],
-
   vite: {
     server: {
       port: DOCS_DEV_PORT
     }
   },
-
   outDir: '../../out/docs'
 })

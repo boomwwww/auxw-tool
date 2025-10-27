@@ -33,7 +33,13 @@ export default defineConfig({
       'meta',
       {
         'http-equiv': 'Content-Security-Policy',
-        content: `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:`
+        content: `
+          default-src 'self';
+          script-src 'self' 'unsafe-inline';
+          style-src 'self' 'unsafe-inline';
+          img-src 'self' data:;
+          font-src 'self' data:;
+        `
       }
     ]
   ],

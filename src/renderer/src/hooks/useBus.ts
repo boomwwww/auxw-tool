@@ -76,7 +76,7 @@ type ApiInvokeResultEvents = {
 type ApiEvents = ApiSendEvents & ApiOnEvents & ApiInvokeEvents & ApiInvokeResultEvents
 
 type AppEvents = {
-  demo: void
+  'app-demo': void
 }
 
 type Events = ApiEvents & AppEvents

@@ -48,7 +48,7 @@ app.whenReady().then(() => {
           dialog.showMessageBox({
             type: 'error',
             title: '错误提示',
-            message: `Live2d 相关脚本下载失败，请关闭程序，确保网络畅通后重试，或查阅说明文档\n${error}`,
+            message: `Live2d 相关脚本下载失败，请关闭程序，确保网络畅通后重试，或查阅说明文档\n错误信息\n${error}`,
             buttons: ['确定']
           })
         }, 1000)

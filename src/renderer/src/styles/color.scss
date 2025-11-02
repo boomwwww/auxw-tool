@@ -14,6 +14,13 @@
   --color-base-gray: #ddd;
 }
 
+/* 一些可能用的的颜色的记录 */
+:root {
+  --color-最左侧边栏背景: #f6f6f6;
+  --color-分割线: #e0e0e0;
+  --color-靠左侧边栏背景: #f6f6f6;
+}
+
 :root {
   --color-primary: var(--color-base-primary);
   --color-secondary: var(--color-base-secondary);

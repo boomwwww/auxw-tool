@@ -9,7 +9,7 @@ export const paths = {
     return path.join(...args).replaceAll('\\', '/')
   },
   // /** 判断两个路径是否等价 */
-  isEqualPath(path1: string, path2: string): boolean {
+  isEqual(path1: string, path2: string): boolean {
     return this.join(path1).toLocaleLowerCase() === this.join(path2).toLocaleLowerCase()
   },
   resolve(...args: string[]) {

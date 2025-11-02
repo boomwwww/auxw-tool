@@ -6,37 +6,32 @@
   --color-base-caution: #e6a23c;
   --color-base-negative: #f56c6c;
 
-  --color-base-info: #999;
-  --color-base-text: #333;
-
-  --color-base-black: #070707;
-  --color-base-white: #f7f7f7;
-  --color-base-gray: #ddd;
-}
-
-/* 一些可能用的的颜色的记录 */
-:root {
-  --color-最左侧边栏背景: #f6f6f6;
-  --color-分割线: #e0e0e0;
-  --color-靠左侧边栏背景: #f6f6f6;
+  --color-base-black: #1e1e1e;
+  --color-base-gray-1: #262626;
+  --color-base-gray-2: #343434;
+  --color-base-gray-3: #e6e6e6;
+  --color-base-gray-4: #f6f6f6;
+  --color-base-white: #ffffff;
 }
 
 :root {
   --color-primary: var(--color-base-primary);
   --color-secondary: var(--color-base-secondary);
 
+  --color-black: var(--color-base-black);
+  --color-white: var(--color-base-white);
+
   --color-ok: var(--color-base-positive);
   --color-warning: var(--color-base-caution);
   --color-danger: var(--color-base-negative);
 
-  --color-info: var(--color-base-info);
-  --color-text: var(--color-base-text);
+  --color-text: var(--color-base-gray-1);
 
-  --color-border: var(--color-base-gray);
+  --color-border: var(--color-base-gray-3);
   --color-bg: var(--color-base-white);
+  --color-bg-secondary: var(--color-base-gray-4);
 
-  --color-offset-hover: color-mix(in hsl, var(--color-base-white) 25%, var(--color-base-black));
-  --color-offset-active: var(--color-base-white);
+  --color-offset-active: var(--color-base-gray-3);
 }
 
 :root[data-theme='dark'] {
@@ -47,12 +42,11 @@
   --color-warning: var(--color-base-caution);
   --color-danger: var(--color-base-negative);
 
-  --color-info: color-mix(in hsl, var(--color-base-white) 25%, var(--color-base-info));
-  --color-text: color-mix(in hsl, var(--color-base-white) 75%, var(--color-base-text));
+  --color-text: var(--color-base-gray-3);
 
-  --color-border: color-mix(in hsl, var(--color-base-black) 66.7%, var(--color-base-gray));
-  --color-bg: color-mix(in hsl, var(--color-base-black) 75%, var(--color-base-gray));
+  --color-border: var(--color-base-gray-2);
+  --color-bg: var(--color-base-black);
+  --color-bg-secondary: var(--color-base-gray-1);
 
-  --color-offset-hover: color-mix(in hsl, var(--color-base-white) 25%, var(--color-base-white));
-  --color-offset-active: color-mix(in hsl, var(--color-base-black) 25%, var(--color-base-black));
+  --color-offset-active: var(--color-base-gray-2);
 }
